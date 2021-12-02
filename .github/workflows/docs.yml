@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy Demo
+name: Build Docs and Deploy
 on:
   push:
     branches:
