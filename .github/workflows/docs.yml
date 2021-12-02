@@ -1,13 +1,19 @@
+# GitAction 名称
 name: Build Docs and Deploy
 
-on: [push]
+# 此CI/CD触发时的事件 push:在代码提交时自动触发
+on:
+  push:
+    branches:
+      - master
 
+# 一个 CI/CD 的工作流有许多 jobs 组成，比如最典型的 job 是 lint，test，build等，这里起名 build-and-deploy
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 运行workflow的服务器系统：ubuntu最新版本
     strategy:
       matrix:
-        node-version: [14, 16]
+        node-version: 16
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -35,25 +41,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/.vitepress/dist
-# on:
-#   push:
-#     branches:
-#       - main
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-#         with:
-#           persist-credentials: false
-#       - name: Install and Build
-#         run: |
-#           npm install
-#           npm run-script build
-#       - name: Deploy
-#         uses: JamesIves/github-pages-deploy-action@releases/v3
-#         with:
-#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#           BRANCH: gh-pages
-#           FOLDER: docs/.vitepress/dist
