@@ -1,2 +1,0 @@
-# Cookies
-Nuxt为读取和写入cookies提供了一套针对服务端渲染友好的组合式api
