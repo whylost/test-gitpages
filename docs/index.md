@@ -1,3 +1,3 @@
 # hello nuxt3
 
-test gitpages
+feat: Use `GithubAction` to build documents and deploy on `GithubPages`
