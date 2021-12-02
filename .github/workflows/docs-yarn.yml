@@ -11,9 +11,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行workflow的服务器系统：ubuntu最新版本
-    strategy: # 使用 node16
-      matrix:
-        node-version: [16]
+    node-version: 16
     steps:
       - name: Checkout 🔐
         uses: actions/checkout@v2
