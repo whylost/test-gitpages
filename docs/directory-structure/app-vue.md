@@ -4,7 +4,7 @@
 
 ## 最小应用
 
-在 Nuxt 3 中如果没有[`pages/`](https://v3.nuxtjs.org/docs/directory-structure/pages)目录，则表示不会包含[vue-router](https://next.router.vuejs.org/)依赖。 当我们完成一个落地页或者是不需要路由就可以这样做。
+在 Nuxt 3 中如果没有[`pages/`](/directory-structure/pages)目录，则表示不会包含[vue-router](https://next.router.vuejs.org/)依赖。 当我们完成一个落地页或者是不需要路由就可以这样做。
 
 ```vue [app.vue]
 <template>
@@ -14,7 +14,7 @@
 
 ## pages
 
-如果需要使用[`pages/`](https://v3.nuxtjs.org/docs/directory-structure/pages)显示相关页面的话，需要使用 `<NuxtPage>` 路由出口组件:
+如果需要使用[`pages/`](/directory-structure/pages)显示相关页面的话，需要使用 `<NuxtPage>` 路由出口组件:
 
 ```vue [app.vue]
 <template>
@@ -33,4 +33,4 @@
 `app.vue`是 Nuxt 应用程序的入口组件。您在其中添加的任何内容（JS 和 CSS）都是全局的，会影响到其他页面。
 :::
 
-如果需要自定义页面布局的话,请查看[`layouts/`](https://v3.nuxtjs.org/docs/directory-structure/layouts)目录.
+如果需要自定义页面布局的话,请查看[`layouts/`](/directory-structure/layouts)目录.
