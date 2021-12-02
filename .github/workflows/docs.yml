@@ -5,15 +5,14 @@ name: Build Docs and Deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 # 一个 CI/CD 的工作流有许多 jobs 组成，比如最典型的 job 是 lint，test，build等，这里起名 build-and-deploy
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行workflow的服务器系统：ubuntu最新版本
-    strategy:
-      matrix:
-        node-version: [16]
+    with:
+      node-version: 16
     steps:
       - name: Checkout
         uses: actions/checkout@v2
