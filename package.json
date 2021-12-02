@@ -2,6 +2,7 @@
   "name": "nuxt3-docs-zh",
   "version": "0.0.1",
   "description": "nuxt3中文文档",
+  "homepage": "https://whylost.github.io/test-gitpages",
   "main": "index.js",
   "repository": "http://github.com/57code/nuxt3-docs-zh",
   "author": "57code",
