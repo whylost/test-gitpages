@@ -11,9 +11,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行workflow的服务器系统：ubuntu最新版本
-    strategy: # 使用 node16
-      matrix:
-        node-version: [16]
+
     steps:
       - name: Checkout 🔐
         uses: actions/checkout@v2
@@ -23,12 +21,14 @@ jobs:
         with:
           version: 6.15.1
 
-      - name: Set node version to ${{ matrix.node_version }} 🔧
+      - name: Set node version to 14 🛠️
         uses: actions/setup-node@v2
         with:
-          # node-version: ${{ matrix.node_version }}
+          node-version: 14
           cache: "pnpm"
 
+      - name: node version 📦
+        run: node -v
       - name: Install deps 📦
         run: pnpm install
 
