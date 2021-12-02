@@ -1,3 +1,3 @@
 # hello nuxt3
 
-test gitpages2
+test gitpages
