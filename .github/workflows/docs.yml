@@ -3,7 +3,7 @@ name: Build Docs and Deploy
 on: [push]
 
 jobs:
-  test:
+  build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:

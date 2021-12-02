@@ -4,7 +4,7 @@
 
 ## 最小应用
 
-在 Nuxt 3 中如果没有[`pages/`](/docs/directory-structure/pages)目录，则表示不会包含[vue-router](https://next.router.vuejs.org/)依赖。 当我们完成一个落地页或者是不需要路由就可以这样做。
+在 Nuxt 3 中如果没有[`pages/`](https://v3.nuxtjs.org/docs/directory-structure/pages)目录，则表示不会包含[vue-router](https://next.router.vuejs.org/)依赖。 当我们完成一个落地页或者是不需要路由就可以这样做。
 
 ```vue [app.vue]
 <template>
