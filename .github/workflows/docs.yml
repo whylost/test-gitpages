@@ -1,23 +1,59 @@
 name: Build Docs and Deploy
-on:
-  push:
-    branches:
-      - main
+
+on: [push]
+
 jobs:
-  build-and-deploy:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         with:
-          persist-credentials: false
-      - name: Install and Build
-        run: |
-          npm install
-          npm run-script build
+          version: 6.15.1
+
+      - name: Set node version to ${{ matrix.node_version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: "pnpm"
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/.vitepress/dist
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+#         with:
+#           persist-credentials: false
+#       - name: Install and Build
+#         run: |
+#           npm install
+#           npm run-script build
+#       - name: Deploy
+#         uses: JamesIves/github-pages-deploy-action@releases/v3
+#         with:
+#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#           BRANCH: gh-pages
+#           FOLDER: docs/.vitepress/dist
