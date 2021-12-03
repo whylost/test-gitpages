@@ -2,7 +2,7 @@
 
 在 Nuxt3，你可以在组合函数、组件以及插件中获取运行时app上下文。
 
-在 Nuxt2，这被称为 [Nuxt上下文](https://nuxtjs.org/docs/internals-glossary/context/#the-context)。
+在 Nuxt2，这被称为 [Nuxt上下文](docs/internals-glossary/context/#the-context)。
 
 ## 获取 NuxtApp
 
