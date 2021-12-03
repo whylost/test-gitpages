@@ -5,7 +5,7 @@ Nuxt 提供了一个 API，用于在应用程序和 API 路由中定义运行时
 ## 公开运行时配置 Exposing runtime config
 
 为了向应用程序的其他部分公开配置和环境变量，您需要在 `nuxt.config` 文件中定义运行时配置，可以使用
-[`privateRuntimeConfig` 或 `publicRuntimeConfig` 选项](https://v3.nuxtjs.org/docs/directory-structure/nuxt.config#privateruntimeconfig)(根据您是否希望在应用程序的客户端部分可以访问它来选择使用)。
+[`privateRuntimeConfig` 或 `publicRuntimeConfig` 选项](/directory-structure/nuxt.config#privateruntimeconfig)(根据您是否希望在应用程序的客户端部分可以访问它来选择使用)。
 
 **示例：**
 
