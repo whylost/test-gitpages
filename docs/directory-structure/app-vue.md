@@ -33,4 +33,4 @@
 `app.vue`是 Nuxt 应用程序的入口组件。您在其中添加的任何内容（JS 和 CSS）都是全局的，会影响到其他页面。
 :::
 
-如果需要自定义页面布局的话,请查看[`layouts/`](/directory-structure/layouts)目录.
+如果需要自定义页面布局的话,请查看[`layouts/`](/directory-structure/layouts)目录1.
