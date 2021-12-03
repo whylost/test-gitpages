@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest # 运行workflow的服务器系统：ubuntu最新版本
 
     steps:
-      - name: Checkout 🔐
+      - name: checkout 🔐
         uses: actions/checkout@v2
 
       - name: Set node version to 16 🛠️
