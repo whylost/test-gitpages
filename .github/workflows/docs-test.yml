@@ -1,5 +1,5 @@
 # GitAction 名称
-name: Build Docs and Deploy with yarn
+name: PR check
 
 # 此CI/CD触发时的事件 push:在代码提交时自动触发
 on:
